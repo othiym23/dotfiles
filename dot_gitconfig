@@ -1,0 +1,90 @@
+[user]
+	name = Forrest L Norvell
+	email = othiym23@gmail.com
+[color]
+	ui = auto
+[alias]
+	a      = !git-alias
+	ba     = branch --all
+	cav    = commit --all --verbose
+	c-     = checkout -
+        co     = checkout
+        ci     = commit
+	cv     = commit --verbose
+	d      = diff
+	ds     = diff --staged
+	m-     = merge --ff-only -
+        pu     = pull --rebase
+	pm     = push origin master
+	pom    = pull origin master
+	prom   = pull --rebase origin master
+	pumpum = push origin master
+	poi    = push origin internal-api
+	fa     = fetch --all
+        st     = status
+        br     = branch
+        hist   = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        type   = cat-file -t
+        dump   = cat-file -p
+	root   = !pwd -P
+	head = log -n1
+	heads = "!git log origin/master.. --format='%Cred%h%Creset;%C(yellow)%an%Creset;%H;%Cblue%f%Creset' | git name-rev --stdin --always --name-only | column -t -s';'"
+	incoming = "!git remote update -p; git log ..@{u}"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg50 = "!git log --graph --abbrev-commit --date=relative --pretty=format:'%x00%h%x00%s%x00%cd%x00%an%x00%d' | gawk -F '\\0' '{ printf \"%s\\033[31m%s\\033[0m %-50s \\033[32m%14s\\033[0m \\033[30;1m%s\\033[0m\\033[33m%s\\n\", $1, $2, gensub(/(.{49}).{2,}/, \"\\\\1…\",\"g\",$3), $4, $5, $6 }' | less -R"
+	lg80 = "!git log --graph --abbrev-commit --date=relative --pretty=format:'%x00%h%x00%s%x00%cd%x00%an%x00%d' | gawk -F '\\0' '{ printf \"%s\\033[31m%s\\033[0m %-80s \\033[32m%14s\\033[0m \\033[30;1m%s\\033[0m\\033[33m%s\\n\", $1, $2, gensub(/(.{79}).{2,}/, \"\\\\1…\",\"g\",$3), $4, $5, $6 }' | less -R"
+	lol = log --graph --decorate --oneline
+	lola = log --graph --decorate --oneline --all
+	outgoing = log @{u}..
+	s = status -sb
+	shit = submodule update --init
+	subcheck = submodule foreach git checkout master
+	subfresh = submodule update --remote --recursive --checkout
+[core]
+	excludesfile = /Users/ogd/.gitignore_global
+	pager = delta
+	# pager = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = false   # color scheme
+[merge]
+	tool = suremerge
+	conflictstyle = diff3
+[mergetool]
+        keepBackup = false
+        keepTemporaries = false
+[diff]
+	colorMoved = default
+[difftool "p4merge"]
+        cmd = p4merge "$LOCAL" "$REMOTE"
+[mergetool "p4merge"]
+        cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+        trustExitCode = false
+[mergetool "suremerge"]
+	cmd = /Applications/guiffy94/guiffyCL.command -s \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+        trustExitCode = false
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result="$MERGED" "$LOCAL" "$BASE" "$REMOTE"
+	trustExitCode = false
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[rerere]
+	enabled = 1
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
