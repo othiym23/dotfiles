@@ -8,6 +8,7 @@ require("config.lazy")
 
 require("opts")
 require("config.completion")
+require("config.ocaml")
 require("config.emmet-ls")
 require("config.lualine")
 

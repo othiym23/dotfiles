@@ -1,10 +1,12 @@
 cabal 3.14.2.0
-dart 3.7.3
+dart 3.8.1
 ghc 9.12.2
-golang 1.24.3
-hls 2.10.0.0
+golang 1.24.5
+hls 2.11.0.0
+java temurin-24.0.1+9
 lua 5.1
 nodejs 24.4.0
-python 3.13.3 2.7.18 system
+perl 5.42.0
+python 3.13.5 2.7.18 system
 ruby 3.3.0 system
-stack 3.5.1
+stack 3.7.1

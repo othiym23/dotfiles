@@ -1,0 +1,99 @@
+packages:
+  darwin:
+    taps:
+      - "buo/cask-upgrade"
+      - "d12frosted/emacs-plus"
+      - "espanso/espanso"
+      - "hashicorp/tap"
+      - "saulpw/vd"
+    brews:
+      # probably already installed if you're using this file, but you never know
+      - "chezmoi"
+      # fileutils and shells
+      - "bash"
+      - "fish"
+      - "zsh"
+      - "zsh-completions"
+      - "lsd"
+      - "eza"
+      - "tree"
+      - "dust"
+      - "calc"
+      - "coreutils"
+      - "findutils"
+      - "base64"
+      - "blake3"
+      - "p7zip"
+      # basic dev tools
+      - "automake"
+      - "bsdmake"
+      - "cmake"
+      # file transfer clients
+      - "curl"
+      - "wget"
+      - "httpie"
+      - "magic-wormhole"
+      # web browsers
+      - "w3m"
+      # web dev tools
+      - "closure-compiler"
+      # benchmarking tools
+      - "siege"
+      - "jmeter"
+      - "httperf"
+      # system performance tools
+      - "bwm-ng" # console-mode bandwidth monitor
+      - "dnstracer"
+      # version control
+      - "git"
+      - "git-lfs"
+      - "git-extras"
+      - "git-delta"
+      - "stgit"
+      - "gh"
+      - "hub"
+      - "mercurial"
+      # finders
+      - "ripgrep"
+      - "fd"
+      - "fzf"
+      # formatters and other dev utils
+      - "cloc"
+      - "clang-format"
+      # editors
+      - "neovim"
+      - "macvim"
+      - "helix"
+      - "dex"
+      - "vd"
+      # toolchain maintenance and version managers
+      - "asdf"
+      - "opam"
+      - "cpanminus"
+      - "mas"
+      - "tpm"
+      - "ghcup"
+      - "rustup"
+      # programming languages that don't need version managers
+      - "julia"
+      - "octave"
+      # hacking tools
+      - "binwalk"
+      # esoteric programming nonsense
+      - "mdk"
+      - "aspcud"
+      # provisioning and system configuration tools
+      - "awscli"
+      - "ansible"
+      # text manipulation tools
+      - "bat"
+      - "aspell"
+      # A/V club
+      - "atomicparsley"
+      - "cuetools"
+      - "ffmpeg"
+      - "mpv"
+      - "video-compare"
+      # games
+      - "angband"
+      - "brogue"
