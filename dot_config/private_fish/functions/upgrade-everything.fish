@@ -2,6 +2,7 @@ function upgrade-everything --description 'Run all the update commands that can 
 date
 and brew upgrade
 and mas upgrade
+and nvim --headless "+Lazy! sync" +qa
 and rustup update
 and asdf latest --all
 date
