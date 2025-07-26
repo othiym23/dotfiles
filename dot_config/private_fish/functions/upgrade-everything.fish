@@ -5,5 +5,11 @@ and mas upgrade
 and nvim --headless "+Lazy! sync" +qa
 and rustup update
 and asdf latest --all
+if begin chezmoi verify ; end
+	echo "No changes to tracked dotfiles."
+else
+	echo "Chezmoi status:"
+	chezmoi status
+end
 date
 end
