@@ -5,6 +5,14 @@ return {
 
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    {
+        "zapling/mason-lock.nvim",
+        init = function()
+            require("mason-lock").setup({
+                lockfile_path = vim.fn.stdpath("config") .. "/mason-lock.json", -- (default)
+            })
+        end,
+    },
 
     "nvim-treesitter/nvim-treesitter",
     "neovim/nvim-lspconfig",
@@ -33,9 +41,12 @@ return {
             formatters = {
                 ocamlformat = {
                     prepend_args = {
-                        "--if-then-else", "vertical",
-                        "--break-cases",  "fit-or-vertical",
-                        "--type-decl",    "sparse",
+                        "--if-then-else",
+                        "vertical",
+                        "--break-cases",
+                        "fit-or-vertical",
+                        "--type-decl",
+                        "sparse",
                     },
                 },
             },
