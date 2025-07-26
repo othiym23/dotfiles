@@ -110,3 +110,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end, bufopts)
     end
 })
+
+require("lspconfig").lua_ls.setup({settings = {diagnostics = {globals = { "vim" }}}})

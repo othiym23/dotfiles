@@ -8,7 +8,7 @@ return {
             { "<Leader>c", ":ccl<CR>:lcl<CR>", mode = "", noremap = true },
         },
         config = function()
-            -- this has to be done here because the keys mapping isn't smart 
+            -- this has to be done here because the keys mapping isn't smart
             -- enough to handle dynamic substitution / execution in Lua.
             vim.cmd([[
             map <Leader>A "zyw:exe ":Ack ".@z<CR>
@@ -18,7 +18,7 @@ return {
     {
         "wincent/command-t",
         build = "cd lua/wincent/commandt/lib && make",
-        setup = function ()
+        setup = function()
             vim.g.CommandTPreferredImplementation = "lua"
         end,
         config = function()
@@ -31,11 +31,12 @@ return {
         -- Gundo is unsupported and doesn't work well with modern Python
         "mbbill/undotree",
         keys = {
-            { "<F5>", ":UndotreeToggle<CR>", },
+            { "<F5>", ":UndotreeToggle<CR>" },
         },
     },
     "Lokaltog/vim-easymotion",
     "bkad/CamelCaseMotion",
     "scrooloose/nerdtree",
     "godlygeek/tabular",
+    "arthurxavierx/vim-caser",
 }
