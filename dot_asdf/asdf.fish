@@ -1,10 +1,10 @@
-if test -z $ASDF_DIR
+if test -z "$ASDF_DIR"
     set ASDF_DIR (builtin realpath --no-symlinks (dirname (status filename)))
 end
 set --export ASDF_DIR $ASDF_DIR
 
 set -l _asdf_bin "$ASDF_DIR/bin"
-if test -z $ASDF_DATA_DIR
+if test -z "$ASDF_DATA_DIR"
     set _asdf_shims "$HOME/.asdf/shims"
 else
     set _asdf_shims "$ASDF_DATA_DIR/shims"
