@@ -39,8 +39,8 @@ vim.keymap.set("n", "&", ":%&&<CR>", { silent = false })
 vim.keymap.set("x", "&", ":&&<CR>", { silent = false })
 
 -- Tabularize (godlygeek/tabular)
-vim.keymap.set('', '<Leader>=', ':Tabularize /=<CR>', { noremap = true })
-vim.keymap.set('', '<Leader>>', ':Tabularize /=><CR>', { noremap = true })
-vim.keymap.set('', '<Leader>,', ':Tabularize /,\\zs<CR>', { noremap = true })
+vim.keymap.set("", "<Leader>=", ":Tabularize /=<CR>", { noremap = true })
+vim.keymap.set("", "<Leader>>", ":Tabularize /=><CR>", { noremap = true })
+vim.keymap.set("", "<Leader>,", ":Tabularize /,\\zs<CR>", { noremap = true })
 
-vim.cmd.colorscheme "solarized"
+vim.cmd.colorscheme("fairyfloss")

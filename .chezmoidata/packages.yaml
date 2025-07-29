@@ -16,8 +16,9 @@ packages:
       - "zsh-completions"
       - "lsd"
       - "eza"
-      - "tree"
+      - "duf"
       - "dust"
+      - "tree"
       - "calc"
       - "coreutils"
       - "findutils"
@@ -60,6 +61,7 @@ packages:
       # formatters and other dev utils
       - "cloc"
       - "clang-format"
+      - "doxygen"
       # editors
       - "neovim"
       - "macvim"
@@ -74,6 +76,9 @@ packages:
       - "tpm"
       - "ghcup"
       - "rustup"
+      # runtimes & platforms
+      - "dotnet"
+      - "mono"
       # programming languages that don't need version managers
       - "julia"
       - "octave"
@@ -84,6 +89,7 @@ packages:
       - "aspcud"
       # provisioning and system configuration tools
       - "awscli"
+      - "ec2-ami-tools"
       - "ansible"
       # text manipulation tools
       - "bat"
@@ -97,3 +103,7 @@ packages:
       # games
       - "angband"
       - "brogue"
+    casks:
+      - "vscode"
+      - "orbstack"
+      - "font-hack-nerd-font"

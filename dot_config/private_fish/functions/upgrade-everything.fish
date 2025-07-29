@@ -9,6 +9,7 @@ if begin chezmoi verify ; end
 	echo "No changes to tracked dotfiles."
 else
 	echo "Chezmoi status:"
+	chezmoi diff --reverse
 	chezmoi status
 end
 date
