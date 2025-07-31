@@ -2,10 +2,16 @@ function upgrade-everything --description 'Run all the update commands that can 
     date
     nvim --headless "+Lazy! sync" +qa
     and brew upgrade
-    and mas upgrade
     and rustup update
-    and asdf latest --all
+    and if begin
+            asdf latest --all
+        end
+        echo "All asdf-managed languages up to date."
+    else
+        echo -e "\033[93;1mSome asdf-managed languages need updating.\033[0m"
+    end
     and softwareupdate -ia
+    and mas upgrade
     and if begin
             chezmoi verify
         end
