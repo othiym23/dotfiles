@@ -12,6 +12,8 @@ font-synthetic-style = false
 # PragmataPro settings are for PragmataPro 0.9
 # earlier versions might require font-feature = -dlig to render properly
 font-family = "PragmataPro Mono Liga"
+# Source Han Sans is a decent font to use for Japanese in terminals
+font-family = "Source Han Sans"
 font-size = 13
 
 # # ｗｉｄｅ
