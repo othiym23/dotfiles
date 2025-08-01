@@ -13,7 +13,7 @@ font-synthetic-style = false
 # earlier versions might require font-feature = -dlig to render properly
 font-family = "PragmataPro Mono Liga"
 # Source Han Sans is a decent font to use for Japanese in terminals
-font-family = "Source Han Sans"
+font-family = "Source Han Mono"
 font-size = 13
 
 # # ｗｉｄｅ
