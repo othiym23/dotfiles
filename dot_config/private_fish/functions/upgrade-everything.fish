@@ -6,9 +6,9 @@ function upgrade-everything --description 'Run all the update commands that can 
     and if begin
             asdf latest --all
         end
-        echo "All asdf-managed languages up to date."
+        echo -e "\033[92;1mAll asdf-managed languages up to date.\033[0m"
     else
-        echo -e "\033[93;1mSome asdf-managed languages need updating.\033[0m"
+        echo -e "\033[93;1mSome asdf-managed languages may have new versions available.\033[0m"
     end
     and softwareupdate -ia
     and mas upgrade
